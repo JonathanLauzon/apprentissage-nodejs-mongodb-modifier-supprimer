@@ -1,0 +1,22 @@
+{
+  "name": "exercice_09",
+  "version": "1.0.0",
+  "description": "Exercice 09 en Node.js",
+  "main": "exercice_09.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "master"
+  },
+  "author": "Jonathan Lauzon",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.1",
+    "ejs": "^2.5.6",
+    "express": "^4.14.1",
+    "mongodb": "^2.2.24"
+  },
+  "devDependencies": {}
+}

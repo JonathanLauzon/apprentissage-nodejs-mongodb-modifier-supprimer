@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+		<title>Exercice 10</title>
 	</head>
 	<body>
 		<div id="tableau">
 			<% if (liste) { %>
 				<table>
 				<% for (var i = 0; i < liste.length; i++) { %>
-					<tr><td><%= liste[i].nom %></td><td><%= liste[i].prenom %></td><td><%= liste[i].telephone %></td><td><%= liste[i].ville %></td><td><%= liste[i].codepostal %></td></tr>
+					<tr data-id="<%= liste[i]._id %>"><td class="case-nom"><%= liste[i].nom %></td><td class="case-prenom"><%= liste[i].prenom %></td><td class="case-telephone"><%= liste[i].telephone %></td><td class="case-ville"><%= liste[i].ville %></td><td class="case-codepostal"><%= liste[i].codepostal %></td><td><button class="btn-modifier" data-id="<%= liste[i]._id %>">Modifier</button></td><td><button class="btn-supprimer" data-id="<%= liste[i]._id %>">Supprimer</button></td></tr>
 				<% } %>
 				</table>
 			<% } %>
 		</div>
-		<form action="http://127.0.0.1:8081/ajouter" method="POST">
+		<form id="formulaire" action="http://127.0.0.1:8081/ajouter" method="POST">
 			<label>Nom</label><input type="text" name="nom" />
 			<label>Prénom</label><input type="text" name="prenom" />
 			<label>Téléphone</label><input type="text" name="telephone" />
 			<label>Ville</label><input type="text" name="ville" />
 			<label>Code postal</label><input type="text" name="codepostal" />
-			<input type="submit" value="Submit" />
+			<input type="submit" value="Submit" name="submit" />
 		</form>
+		<script type="text/javascript" src="js/script.js"></script>
 	</body>
 </html>
